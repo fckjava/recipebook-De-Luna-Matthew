@@ -1,0 +1,10 @@
+
+<h1> Recipe Book </h1>
+{% block content %}
+<h2> {{ name }} </h2>
+<ul>
+    {% for ingredient in ingredients %}
+    <li>{{ ingredient.quantity }} of {{ ingredient.name }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
