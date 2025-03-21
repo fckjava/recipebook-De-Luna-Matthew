@@ -1,6 +1,6 @@
-<h1> Recipe Book </h1>
-{% block title %} Recipes {% endblock %}
+{% extends "ledger/base.html" %}
 
+{% block title %} Recipes {% endblock %}
 {% block content %}
 <ul>
     {% for recipe in recipes %}
