@@ -1,6 +1,7 @@
+{% extends "ledger/base.html" %}
 
-<h1> Recipe Book </h1>
 {% block content %}
+<h1> Author: {{recipe.author}} </h1>
 <h2> {{ recipe.name }} </h2>
 <ul>
     {% for ingredient in recipe.ingredients.all %}

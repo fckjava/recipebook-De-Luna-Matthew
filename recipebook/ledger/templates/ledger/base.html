@@ -5,6 +5,22 @@
     <title>{% block title %}Recipe Book{% endblock %}</title>
 </head>
 <body>
+    <header> 
+        <h1>Recipe Book</h1>
+        <div>
+            {% if user.is_authenticated %}
+                <form method="POST" action ="{% url 'logout' %}">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Logout</button>
+                </form>
+            {% else %}
+                <a href = "{% url 'login' %}"><button type="button">Login</button></a>
+            {% endif %}
+        </div>
+    </header>
+
+
     <div id="content">
         {% block content %}{% endblock %}
     </div>
